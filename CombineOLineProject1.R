@@ -6,6 +6,8 @@ library(rvest)
 library(plyr)
 library(dplyr)
 
+#This is a new comment
+
 #Trim function
 trim <- function( x ) {gsub("(^[[:space:]]+|[[:space:]]+$)", "", x)}
 
