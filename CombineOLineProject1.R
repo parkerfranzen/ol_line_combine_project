@@ -6,10 +6,7 @@ library(rvest)
 library(plyr)
 library(dplyr)
 
-#Trim function
-trim <- function( x ) {gsub("(^[[:space:]]+|[[:space:]]+$)", "", x)}
-
-#Get years and positions
+#Get years
 years <- c("2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010",
            "2011", "2012", "2013", "2014", "2015", "2016", "2017")
 
@@ -79,6 +76,8 @@ all_players <- all_players %>% mutate(id = row_number())
 
 #Trimming original link to get to each player's game log.
 #Game logs give the years the player played.
+#Trim function
+trim <- function( x ) {gsub("(^[[:space:]]+|[[:space:]]+$)", "", x)}
 all_players$new_Player_Link <- trim(gsub(".htm", "", all_players$Player_Link))
 
 #List of all players' links to their game log
