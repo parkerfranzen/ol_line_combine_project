@@ -1,0 +1,14 @@
+name: NFL_Scouting_Combine_OL_Longevity
+title: NFL_Scouting_Combine_OL_Longevity
+username:
+account: parkerfranzen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4100805
+bundleId: 4574760
+url: https://parkerfranzen.shinyapps.io/NFL_Scouting_Combine_OL_Longevity/
+when: 1620494450.92582
+lastSyncTime: 1620494450.92583
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: www/.DS_Store
