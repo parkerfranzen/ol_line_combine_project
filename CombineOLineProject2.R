@@ -210,25 +210,13 @@ b_players <- all_players[!is.na(all_players$Broad_Jump), ]
 c_players <- all_players[!is.na(all_players$`3_Cone`), ]
 s_players <- all_players[!is.na(all_players$Shuttle), ]
 
+#Correlation Tests
 cor.test(d_players$Years_Played, d_players$`40_Yard_Dash`, method = c("pearson"))
 cor.test(v_players$Years_Played, v_players$Vertical, method = c("pearson"))
 cor.test(bp_players$Years_Played, bp_players$Bench, method = c("pearson"))
 cor.test(b_players$Years_Played, b_players$Broad_Jump, method = c("pearson"))
 cor.test(c_players$Years_Played, c_players$`3_Cone`, method = c("pearson"))
 cor.test(s_players$Years_Played, s_players$Shuttle, method = c("pearson"))
-
-ggplot(all_players, aes(x=Years_Played, y=Vertical)) + geom_point() +
-  geom_smooth(method=lm) + stat_cor(method = "pearson")
-ggplot(all_players, aes(x=Years_Played, y=`40_Yard_Dash`)) + geom_point() +
-  geom_smooth(method=lm)
-ggplot(all_players, aes(x=Years_Played, y=Broad_Jump)) + geom_point() +
-  geom_smooth(method=lm)
-ggplot(all_players, aes(x=Years_Played, y=Bench)) + geom_point() +
-  geom_smooth(method=lm)
-ggplot(all_players, aes(x=Years_Played, y=`3_Cone`)) + geom_point() +
-  geom_smooth(method=lm)
-ggplot(all_players, aes(x=Years_Played, y=Shuttle)) + geom_point() +
-  geom_smooth(method=lm)
 
 #### Creating lists of 75th percentile values for all drills ####
 
