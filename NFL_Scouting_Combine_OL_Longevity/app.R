@@ -5,11 +5,12 @@ library(ggpubr)
 library(plotly)
 library(tidyverse)
 library(dplyr)
+
 load(url("https://github.com/parkerfranzen/ol_line_combine_project/blob/main/OLCombine.RData?raw=true"))
 all_players <- subset(all_players, select = -c(id))
 all_players <- all_players[, c(1,9,2,3,4,5,6,7,8,10)]
 all_players <- all_players %>% dplyr::rename(Position = 3, Vertical_Jump = 5, Bench_Press = 6, Three_Cone_Drill = 8)
-# Define UI for application that draws a histogram
+
 ui <- fluidPage(
     
     titlePanel(
@@ -99,7 +100,6 @@ ui <- fluidPage(
     )
 )
 
-# Define server logic required to draw a histogram
 server <- function(input, output){
     
     #Graph in Correlation panel
